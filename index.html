@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesca Esportiva</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header class="container">
-        <main class="margin">
-            <div img-container>
-               <img src="./imagens/seafood.png" alt="imagem da companhia">
-           </div>
-        
-           <div class="search">
-               <input type="text" placeholder="Pesquisar...">
-           </div>
-        
-           <div class="lista-ajuda">
-               <ul>
-                   <li><a href="#">Notícias</a></li>
-                   <li><a href="#">Eventos</a>
-                       <ul>
-                            <li><a href="#">Sinop</a></li>
-                            <li<a href="#">Sorriso</a></li>
-                            <li><a href="#">Itauba</a></li>
-                       </ul>
-                   </li>
-                   <li><a href="#">Mapa</a></li>
-                   <li><a href="#">Dicas</a></li>
-                   <li><a href="#">Peixes</a></li>
-                   <li><a href="#">Historia</a></li>
-               </ul>
-           </div>
-       </main>
-      </header>
-    
-    <script src="main.js"></script>
+    <section class="cabecalho">
+            <div class="contatos">
+                <main class="margem">
+                    <img src="./imagens/telefone.png" alt="Telefone" class="telefone">
+                    <span class="telefone"><a href="#">+55 (66) 9 9683-7095</a></span>
+                    <img src="./imagens/email.png" alt="E-mail" class="email">
+                    <span class="email"><a href="#">joao.buss@unemat.br</a></span>
+                </main>
+            </div>
+            <div class="container">
+                <main class="margem">
+                    <a class="logo" href="#"><img src="./imagens/seafood.png" alt="Logo" class="logo"></a>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="#"><span>Noticias</span></a></li>
+                            <li><a href="#"><span>Mapa</span></a></li>
+                            <li class="listar-submenu"><a href="#"><span>Eventos</span></a>
+                                <ul>
+                                    <li><a href="#"><span>Sinop</span></a></li>
+                                    <li><a href="#"><span>Sorriso</span></a></li>
+                                    <li><a href="#"><span>Itauba</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><span>Dicas</span></a></li>
+                        </ul>
+                    </nav>
+                    <div class="search">
+                        <input type="search" placeholder="🔍 Digite sua pesquisa..">
+                    </div>
+                </main>
+            </div>
+    </section>
 </body>
 </html>
