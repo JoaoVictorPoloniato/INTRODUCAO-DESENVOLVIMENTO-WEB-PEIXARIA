@@ -1,4 +1,6 @@
-
+body {
+    background-color: #e6e1e1;
+}
 @font-face {
     font-family: 'Montserrat';
     src: url('fontes/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
@@ -18,6 +20,8 @@
     display: fixed;
     width: 100%;
     height: 70px;
+    box-shadow: 0 0 50px #333;
+    z-index: 99;
 }
 .margem{
     display: flex;
@@ -29,7 +33,7 @@
     display: flex;
     width: 100%;
     height: 30%;
-    background-color: #F29188;
+    background-color: #B96D67;
     flex-direction: row;
 }
 .contatos img{
@@ -109,6 +113,7 @@ a.logo{
     padding-left:0.5rem;
 }
 
+
 .search{ 
     width: 30%;
     display: flex;
@@ -128,6 +133,85 @@ a.logo{
 
 .search input::placeholder{
     color: black;
+}
+
+.noticias {
+    background-color: #F29188;
+    width: 100%;
+    height: 10vw;
+    box-shadow: 0 0 50px #9B5C57 inset;
+    display: flex;
+    justify-content: center;
+
+}
+.noticias h1 {
+    line-height: 9rem;
+    color: black;
+    font-size: 3rem;
+}
+
+.outras-secoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bloco-informativo {
+    width: calc(30% - 4vw);
+    background-color: #9B5C57;
+    border-radius: 2vw;
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+.imagem-informativa {
+    width: 100%;
+}
+
+.bloco-informativo img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 2vw 2vw 0 0;
+    margin-top: auto;
+}
+.bloco-informativo h3{
+    font-size: 1.5vw;
+    padding: 0 2vw;
+}
+.bloco-informativo p{
+    font-size: 1.1vw;
+    padding: 1vw 2vw;
+}
+.outras-secoes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+button {
+    background-color: #fff;
+    color: #034873;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 2vw;
+    cursor: pointer;
+    font-size: 1vw;
+    margin-bottom:1vw;
+}
+button:hover {
+    background-color: #9B5C57;
+    color:#fff;
+    transition:0.5s;
+}
+
+.conteudo{
+    width: 85%;
 }
 @media screen and (max-width:600px){
     .menu{
@@ -156,5 +240,13 @@ a.logo{
         position: relative;
         box-sizing: content-box;
     }
+
+    
+    .noticias {
+    position: relative;
+    top: 73px;
+    height: 30%;
+
+}
 
 }
