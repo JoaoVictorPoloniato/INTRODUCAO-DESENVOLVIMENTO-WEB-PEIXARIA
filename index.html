@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <section class="cabecalho">
@@ -20,8 +21,8 @@
                     <a class="logo" href="#"><img src="./imagens/seafood.png" alt="Logo" class="logo"></a>
                     <nav class="menu">
                         <ul>
-                            <li><a href="#"><span>Noticias</span></a></li>
-                            <li><a href="#"><span>Mapa</span></a></li>
+                            <li><a href="#noticias"><span>Noticias</span></a></li>
+                            <li><a href="#maps"><span>Mapa</span></a></li>
                             <li class="listar-submenu"><a href="#"><span>Eventos</span></a>
                                 <ul>
                                     <li><a href="#"><span>Sinop</span></a></li>
@@ -33,13 +34,13 @@
                         </ul>
                     </nav>
                     <div class="search">
-                        <input type="search" placeholder="🔍 Digite sua pesquisa..">
+                        <input id="pesquisa" type="search" placeholder="🔍 Digite sua pesquisa.." onkeydown="if (event.keyCode === 13) document.getElementById('botao-pesquisa').click()">
+                        <button class="pesquisar" id="botao-pesquisa">Pesquisar</button>
                     </div>
                 </main>
             </div>
     </section>
-
-    <section class="noticias">
+    <section class="noticias" id="noticias" data-palavra-chave="noticias">
         <h1>Notícias</h1>
     </section>
     <main class="margem conteudo">
@@ -101,9 +102,12 @@
             </section>
     </main>
 
-    <section class="maps">
+    <section class="maps" id="maps" data-palavra-chave="mapa">
         <h1>Mapa</h1>
     </section>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
