@@ -146,7 +146,7 @@ a.logo{
 }
 .noticias h1 {
     line-height: 9rem;
-    color: black;
+    color: white;
     font-size: 3rem;
 }
 
@@ -212,6 +212,22 @@ button:hover {
 
 .conteudo{
     width: 85%;
+}
+
+.maps {
+    background-color: #F29188;
+    width: 100%;
+    height: 10vw;
+    box-shadow: 0 0 50px #9B5C57 inset;
+    display: flex;
+    justify-content: center;
+
+}
+
+.maps h1 {
+    line-height: 9rem;
+    color: white;
+    font-size: 3rem;
 }
 @media screen and (max-width:600px){
     .menu{
