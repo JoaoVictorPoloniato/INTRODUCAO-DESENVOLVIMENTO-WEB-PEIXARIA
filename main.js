@@ -15,16 +15,13 @@ $(document).ready(function() {
 });
 
 function initMap() {
-    
     var mapOptions = {
         center: {lat: -11.8605, lng: -55.5063},
         zoom: 12 
     };
 
-    
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    
     var locaisDePesca = [
         { 
             nome: 'Salto Magessi - Santa Rita do Trivelato',
@@ -53,26 +50,32 @@ function initMap() {
         }
     ];
 
-
-for (var i = 0; i < locaisDePesca.length; i++) {
-    var local = locaisDePesca[i];
-    var marker = new google.maps.Marker({
-        position: local.coordenadas,
-        map: map,
-        title: local.nome
-    });
-
-    (function(marker, local) {
-
-        var infoWindow = new google.maps.InfoWindow({
-            content: '<div><h3>' + local.nome + '</h3><img src="' + (local.imagem || '') + '" width="200"></div>'
-        });
-        marker.addListener('mouseover', function() {
-            infoWindow.open(map, this);
+    for (var i = 0; i < locaisDePesca.length; i++) {
+        var local = locaisDePesca[i];
+        var marker = new google.maps.Marker({
+            position: local.coordenadas,
+            map: map,
+            title: local.nome
         });
 
-        marker.addListener('mouseout', function() {
-            infoWindow.close();
-        });
-    })(marker, local);
-}}
+        (function(marker, local) {
+            var infoWindow = new google.maps.InfoWindow({
+                content: '<div><h3>' + local.nome + '</h3><img src="' + (local.imagem || '') + '" width="200"></div>'
+            });
+
+            if ($(window).width() <= 768) {
+                marker.addListener('click', function() {
+                    infoWindow.open(map, this);
+                });
+            } else {
+                marker.addListener('mouseover', function() {
+                    infoWindow.open(map, this);
+                });
+
+                marker.addListener('mouseout', function() {
+                    infoWindow.close();
+                });
+            }
+        })(marker, local);
+    }
+}

@@ -211,6 +211,7 @@ button {
     font-size: 1vw;
     margin-bottom:1vw;
 }
+
 button:hover {
     background-color: #9B5C57;
     color:#fff;
@@ -272,4 +273,42 @@ button:hover {
 
 }
 
+    .maps {
+        position: relative;
+        height: 30%;
+        top: 50%;
+    }
+
+    .outras-secoes {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70px;
+    }
+
+    .bloco-informativo {
+        width: 70vw;
+        height: 300px; 
+        margin-bottom: 20px; 
+    }
+
+    .bloco-informativo img{
+        height: 40vw;
+    }
+    .bloco-informativo h3{
+        font-size: 4vw;
+        padding: 0 2vw;
+    }
+    .bloco-informativo p{
+        font-size: 3.1vw;
+        padding: 1vw 2vw;
+    }
+
+    button {
+        font-size: 3vw;
+    }
+
 }
+
+
+
+
