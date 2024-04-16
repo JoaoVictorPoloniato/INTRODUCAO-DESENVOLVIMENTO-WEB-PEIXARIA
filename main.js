@@ -13,3 +13,21 @@ $(document).ready(function() {
         $('#pesquisa').val('');
     });
 });
+
+function initMap() {
+    // Configurações do mapa
+    var mapOptions = {
+        center: {lat: -11.8605, lng: -55.5063}, // Coordenadas do centro do mapa
+        zoom: 10 // Nível de zoom
+    };
+
+    // Criar o mapa
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // Adicionar marcador
+    var marker = new google.maps.Marker({
+        position: {lat: -11.8605, lng: -55.5063}, // Coordenadas do marcador
+        map: map,
+        title: 'Sinop, MT' // Título do marcador
+    });
+}
