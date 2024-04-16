@@ -15,19 +15,64 @@ $(document).ready(function() {
 });
 
 function initMap() {
-    // Configurações do mapa
+    
     var mapOptions = {
-        center: {lat: -11.8605, lng: -55.5063}, // Coordenadas do centro do mapa
-        zoom: 10 // Nível de zoom
+        center: {lat: -11.8605, lng: -55.5063},
+        zoom: 8 
     };
 
-    // Criar o mapa
+    
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    // Adicionar marcador
+    
+    var locaisDePesca = [
+        { 
+            nome: 'Salto Magessi - Santa Rita do Trivelato',
+            coordenadas: { lat: -13.7708, lng: -55.2903 },
+            imagem: './imagens/Salto-magessi.jpg'
+        },
+        {
+            nome: 'Marina Santo Expedito - Itaúba',
+            coordenadas: { lat: -11.8389, lng: -55.2833 },
+            imagem: './imagens/Santo-expedito.png'
+        },
+        {
+            nome: 'Córrego Luanda',
+            coordenadas: { lat: -11.8481, lng: -55.6692 },
+            imagem: './imagens/luanda.png'
+        },
+        {
+            nome: 'Marina Mac Dog',
+            coordenadas: { lat: -11.8123, lng: -55.4822 },
+            imagem: './imagens/Salto-magessi.jpg'
+        },
+        {
+            nome: 'Marina Tapajós',
+            coordenadas: { lat: -11.8551, lng: -55.4995 },
+            imagem: './imagens/Salto-magessi.jpg'
+        }
+    ];
+
+
+for (var i = 0; i < locaisDePesca.length; i++) {
+    var local = locaisDePesca[i];
     var marker = new google.maps.Marker({
-        position: {lat: -11.8605, lng: -55.5063}, // Coordenadas do marcador
+        position: local.coordenadas,
         map: map,
-        title: 'Sinop, MT' // Título do marcador
+        title: local.nome
     });
-}
+
+    (function(marker, local) {
+
+        var infoWindow = new google.maps.InfoWindow({
+            content: '<div><h3>' + local.nome + '</h3><img src="' + (local.imagem || '') + '" width="200"></div>'
+        });
+        marker.addListener('mouseover', function() {
+            infoWindow.open(map, this);
+        });
+
+        marker.addListener('mouseout', function() {
+            infoWindow.close();
+        });
+    })(marker, local);
+}}
