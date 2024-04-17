@@ -237,6 +237,61 @@ button:hover {
     color: white;
     font-size: 3rem;
 }
+
+.evento {
+    background-color: #F29188;
+    width: 100%;
+    height: 10vw;
+    box-shadow: 0 0 50px #9B5C57 inset;
+    display: flex;
+    justify-content: center;
+
+}
+
+.evento h1 {
+    line-height: 9rem;
+    color: white;
+    font-size: 3rem;
+}
+
+.principal-eventos{
+    background-color: #333;
+    width: 100%;
+    height: 50vw;
+}
+
+.apresentacao{
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+.apresentacao h3{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.cidade {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cidade h4 {
+    margin-top: 0;
+}
+
+.evento-info {
+    display: none;
+}
+
+.evento-info.active {
+    display: block;
+}
 @media screen and (max-width:600px){
     .menu{
         width: 100%;
@@ -274,6 +329,12 @@ button:hover {
 }
 
     .maps {
+        position: relative;
+        height: 30%;
+        top: 50%;
+    }
+
+    .evento {
         position: relative;
         height: 30%;
         top: 50%;

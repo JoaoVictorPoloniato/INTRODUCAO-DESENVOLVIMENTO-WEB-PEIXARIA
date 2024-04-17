@@ -22,7 +22,7 @@
                         <ul>
                             <li><a href="#noticias"><span>Noticias</span></a></li>
                             <li><a href="#maps"><span>Mapa</span></a></li>
-                            <li class="listar-submenu"><a href="#"><span>Eventos</span></a>
+                            <li class="listar-submenu"><a href="#eventos"><span>Eventos</span></a>
                                 <ul>
                                     <li><a href="#"><span>Sinop</span></a></li>
                                     <li><a href="#"><span>Sorriso</span></a></li>
@@ -105,6 +105,41 @@
         <h1>Mapa</h1>
     </section>
     <div id="map" style="height: 500px;"></div>
+
+    <section class="evento" id="eventos" data-palavra-chave="eventos">
+        <h1>Eventos</h1>
+    </section>
+
+    <main class="margem">
+        <section class="principal-eventos">
+            <section class="apresentacao">
+                <h3>Confira aqui os principais eventos de pesca nas principais cidades do norte do Mato Grosso.</h3>
+            </section>
+ 
+            <section class="cidade">
+                <button onclick="toggleEventInfo('sinop')">Confira o evento em Sinop</button>
+                <div id="sinop-evento" class="evento-info">
+                    <p>Informações sobre os eventos de pesca em Sinop.</p>
+                </div>
+            </section>
+
+            <section class="cidade">
+                <h4>Sorriso</h4>
+                <button onclick="toggleEventInfo('sinop')">Confira o evento em Sorriso</button>
+                <div id="sorriso-evento" class="evento-info">
+                    <p>Informações sobre os eventos de pesca em Sorriso.</p>
+                </div>
+            </section>
+
+            <section class="cidade">
+                <h4>Rondonópolis</h4>
+                <button onclick="toggleEventInfo('rondonopolis')">Confira o evento em Rondonópolis</button>
+                <div id="rondonopolis-evento" class="evento-info">
+                    <p>Informações sobre os eventos de pesca em Rondonópolis.</p>
+                </div>
+            </section>
+        </section>
+    </main>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHuoMakJ9Rsb6yYHMhpvDrFctc58wNPJc&callback=initMap" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

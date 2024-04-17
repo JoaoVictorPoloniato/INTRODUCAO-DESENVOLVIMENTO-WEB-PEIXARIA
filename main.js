@@ -79,3 +79,8 @@ function initMap() {
         })(marker, local);
     }
 }
+
+function toggleEventInfo(city) {
+    const eventoInfo = document.getElementById(`${city}-evento`);
+    eventoInfo.classList.toggle('active');
+}
