@@ -115,29 +115,24 @@
             <section class="apresentacao">
                 <h3>Confira aqui os principais eventos de pesca nas principais cidades do norte do Mato Grosso.</h3>
             </section>
- 
-            <section class="cidade">
-                <button onclick="toggleEventInfo('sinop')">Confira o evento em Sinop</button>
-                <div id="sinop-evento" class="evento-info">
-                    <p>Informações sobre os eventos de pesca em Sinop.</p>
+                <div class="botao-cidade">
+                    <button onclick="toggleEventInfo('sinop')">Confira o evento em Sinop</button>
+                    <button onclick="toggleEventInfo('sorriso')">Confira o evento em Sorriso</button>
+                    <button onclick="toggleEventInfo('rondonopolis')">Confira o evento em Rondonópolis</button>
                 </div>
-            </section>
 
-            <section class="cidade">
-                <h4>Sorriso</h4>
-                <button onclick="toggleEventInfo('sinop')">Confira o evento em Sorriso</button>
-                <div id="sorriso-evento" class="evento-info">
-                    <p>Informações sobre os eventos de pesca em Sorriso.</p>
+                <div class="eventus">
+                    <div id="sinop-evento" class="evento-info">
+                        <p>Informações sobre os eventos de pesca em Sinop.</p>
+                    </div>
+                    <div id="sorriso-evento" class="evento-info">
+                        <p>Informações sobre os eventos de pesca em Sorriso.</p>
+                    </div>
+                    <div id="rondonopolis-evento" class="evento-info">
+                        <p>Informações sobre os eventos de pesca em Rondonópolis.</p>
+                    </div>
                 </div>
-            </section>
 
-            <section class="cidade">
-                <h4>Rondonópolis</h4>
-                <button onclick="toggleEventInfo('rondonopolis')">Confira o evento em Rondonópolis</button>
-                <div id="rondonopolis-evento" class="evento-info">
-                    <p>Informações sobre os eventos de pesca em Rondonópolis.</p>
-                </div>
-            </section>
         </section>
     </main>
 
