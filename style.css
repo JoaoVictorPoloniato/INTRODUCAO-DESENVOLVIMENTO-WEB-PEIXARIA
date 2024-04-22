@@ -255,15 +255,7 @@ button:hover {
 }
 
 .principal-eventos{
-    display: grid;
-    grid-template-rows: 6vw 35vw;
-    grid-template-columns: 100%;
-    grid-template-areas: 
-    'titulo titulo'
-    'botao botao';
-    background-color: #333;
     width: 100%;
-    height: 40vw;
 }
 .principal-eventos button{
     grid-area: botao;
@@ -275,25 +267,14 @@ button:hover {
     grid-area: botao;
     margin: 10px;
 }
+.botao-cidade button{
+    width: 100%;
+}
 .eventus{
+    background-color: #034873;
     grid-area: conteudo;
+    margin-top: 50%;
 }
-
-.apresentacao{
-    width: 60%;
-    text-align: center;
-    justify-content: center;
-    margin-left: 20%;
-    grid-area: titulo;
-}
-
-.apresentacao h3{
-    font-size: 2.5rem;
-    color: white;
-}
-
-
-
 
 .evento-info {
     display: none;
@@ -302,6 +283,47 @@ button:hover {
 .evento-info.active {
     display: block;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal h2 {
+    margin-bottom: 10px;
+}
+
+.modal p {
+    margin-bottom: 20px;
+}
+
+.modal button {
+    padding: 10px 20px;
+    background-color: #f29188;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #e6837b;
+}
+
 @media screen and (max-width:600px){
     .menu{
         width: 100%;

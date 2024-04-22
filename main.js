@@ -80,7 +80,55 @@ function initMap() {
     }
 }
 
-function toggleEventInfo(city) {
-    const eventoInfo = document.getElementById(`${city}-evento`);
-    eventoInfo.classList.toggle('active');
+function createModal(city) {
+
+    var modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    var modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+
+    var title = document.createElement('h2');
+    title.textContent = 'Evento em ' + city;
+    modalContent.appendChild(title);
+
+    var eventInfo = document.createElement('p');
+
+    eventInfo.textContent = 'Informações sobre os eventos de pesca em ' + city;
+    modalContent.appendChild(eventInfo);
+
+    var closeButton = document.createElement('button');
+
+    closeButton.textContent = 'Fechar';
+    closeButton.addEventListener('click', function() {
+        modal.remove();
+    });
+    modalContent.appendChild(closeButton);
+
+    modal.appendChild(modalContent);
+
+    document.body.appendChild(modal);
+}
+
+function showEventInfo(city) {
+    createModal(city);
+}
+
+function exibirQuadro() {
+
+    var quadro = document.getElementById("quadro");
+    quadro.style.display = "block";
+}
+
+function esconderQuadro() {
+    
+    var quadro = document.getElementById("quadro");
+    quadro.style.display = "none";
+}
+
+function showEventInfo(city) {
+    
+    createModal(city);
+
+    exibirQuadro();
 }
