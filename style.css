@@ -376,7 +376,23 @@ button:hover {
     color: white;
     font-size: 3rem;
 }
-
+footer{
+    width: 100%;
+    background-color: #9B5C57;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.copyright{
+    width: 20%;
+    color: white;
+    text-align: center;
+    margin-left: 39%;
+}
+.copyright p {
+    text-align: left;
+}
 @media screen and (max-width:600px){
     .menu{
         width: 100%;
