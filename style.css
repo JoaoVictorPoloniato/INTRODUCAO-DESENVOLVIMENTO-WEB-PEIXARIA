@@ -163,8 +163,24 @@ button.pesquisar {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.outras-secoes-eventos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 .bloco-informativo {
+    width: calc(30% - 4vw);
+    background-color: #9B5C57;
+    border-radius: 2vw;
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+.bloco-informativo-eventos {
     width: calc(30% - 4vw);
     background-color: #9B5C57;
     border-radius: 2vw;
@@ -188,6 +204,15 @@ button.pesquisar {
     border-radius: 2vw 2vw 0 0;
     margin-top: auto;
 }
+.bloco-informativo-eventos img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 2vw 2vw 0 0;
+    margin-top: auto;
+}
 .bloco-informativo h3{
     font-size: 1.5vw;
     padding: 0 2vw;
@@ -196,12 +221,22 @@ button.pesquisar {
     font-size: 1.1vw;
     padding: 1vw 2vw;
 }
-.outras-secoes {
+.bloco-informativo-eventos h3{
+    font-size: 1.5vw;
+    padding: 0 2vw;
+}
+.bloco-informativo-eventos p{
+    font-size: 1.1vw;
+    padding: 1vw 2vw;
+}
+.outras-secoes-eventos {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 0;
 }
+
 button {
     background-color: #fff;
     color: #034873;
@@ -263,7 +298,7 @@ button:hover {
     grid-area: botao;
     position: relative;
     width: 80%;
-    height: 10%;
+
 }
 .botao-cidade {
     grid-area: botao;
@@ -324,6 +359,22 @@ button:hover {
 
 .modal button:hover {
     background-color: #e6837b;
+}
+
+.peixe {
+    background-color: #F29188;
+    width: 100%;
+    height: 10vw;
+    box-shadow: 0 0 50px #9B5C57 inset;
+    display: flex;
+    justify-content: center;
+    margin-top: -150px;
+
+}
+.peixe h1 {
+    line-height: 9rem;
+    color: white;
+    font-size: 3rem;
 }
 
 @media screen and (max-width:600px){
