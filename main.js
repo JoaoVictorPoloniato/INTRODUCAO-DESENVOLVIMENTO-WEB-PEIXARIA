@@ -12,6 +12,7 @@ $(document).ready(function() {
 
         $('#pesquisa').val('');
     });
+    initMap();
 });
 
 function initMap() {
@@ -78,6 +79,7 @@ function initMap() {
             }
         })(marker, local);
     }
+    initMiniMap();
 }
 
 function createModal(city) {
@@ -132,3 +134,24 @@ function showEventInfo(city) {
 
     exibirQuadro();
 }
+
+// Função para inicializar o minimapa
+function initMiniMap() {
+    // Coordenadas do centro do mapa
+    var centroMapa = { lat: -11.8605, lng: -55.5063 };
+
+    // Opções do mapa
+    var mapaOptions = {
+        center: centroMapa,
+        zoom: 8, // Ajuste o nível de zoom conforme necessário
+        disableDefaultUI: true // Remova a interface padrão do mapa (opcional)
+    };
+
+    // Criar o mapa dentro do elemento com o ID 'minimapa'
+    var minimapa = new google.maps.Map(document.getElementById('minimapa'), mapaOptions);
+
+    // Adicione marcadores, polígonos, ou outras camadas conforme necessário
+}
+
+// Chamada da função para inicializar o minimapa quando a página carregar
+google.maps.event.addDomListener(window, 'load', initMiniMap);
