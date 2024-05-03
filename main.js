@@ -150,7 +150,36 @@ function initMiniMap() {
     // Criar o mapa dentro do elemento com o ID 'minimapa'
     var minimapa = new google.maps.Map(document.getElementById('minimapa'), mapaOptions);
 
-    // Adicione marcadores, polígonos, ou outras camadas conforme necessário
+    // Adicione marcadores para representar os rios da região
+    var rios = [
+        { nome: 'Teles Pires', coordenadas: { lat: -11.6875, lng: -54.8431 } },
+        { nome: 'Paranatinga', coordenadas: { lat: -14.6094, lng: -54.0625 } }
+        // Adicione mais rios conforme necessário
+    ];
+
+    for (var i = 0; i < rios.length; i++) {
+        var rio = rios[i];
+        new google.maps.Marker({
+            position: rio.coordenadas,
+            map: minimapa,
+            title: rio.nome
+        });
+    }
+
+    // Adicione botões de controle de zoom
+    var zoomInButton = document.createElement('button');
+    zoomInButton.innerHTML = '+';
+    zoomInButton.onclick = function() {
+        minimapa.setZoom(minimapa.getZoom() + 1);
+    };
+    minimapa.controls[google.maps.ControlPosition.TOP_LEFT].push(zoomInButton);
+
+    var zoomOutButton = document.createElement('button');
+    zoomOutButton.innerHTML = '-';
+    zoomOutButton.onclick = function() {
+        minimapa.setZoom(minimapa.getZoom() - 1);
+    };
+    minimapa.controls[google.maps.ControlPosition.TOP_LEFT].push(zoomOutButton);
 }
 
 // Chamada da função para inicializar o minimapa quando a página carregar
