@@ -10,4 +10,4 @@ JQUERY para poder localizar uma palavra chave no site.
 
 Exemplo do Jquery a seguir 
 
-<img src="" alt="Jquery"
+<img src="./imagens/casa_agua.png" alt="Jquery">
