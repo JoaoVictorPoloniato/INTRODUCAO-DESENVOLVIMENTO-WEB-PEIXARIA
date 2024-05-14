@@ -620,3 +620,216 @@ google.maps.event.addDomListener(window, 'load', initMap);: Carrega o mapa quand
 
 Conclusão
 A integração de um mapa interativo com marcadores detalhados melhora significativamente a experiência do usuário, permitindo explorar locais de pesca e eventos de forma visual e intuitiva. Essa abordagem oferece uma ferramenta valiosa para os pescadores e entusiastas, facilitando a localização de pontos de interesse e o planejamento de suas atividades.
+
+##
+
+Seção de Eventos
+A seção de eventos é projetada para fornecer informações detalhadas sobre os diversos festivais e competições de pesca em diferentes cidades. A estrutura HTML é organizada para exibir cada evento com uma imagem, uma breve descrição e um botão que, quando clicado, exibe mais informações sobre o evento específico.
+
+Estrutura HTML da Seção de Eventos
+
+html
+<section class="evento" id="eventos" data-palavra-chave="eventos">
+    <h1>Eventos</h1>
+</section>
+
+<main class="margem conteudo">
+    <section class="principal-eventos">
+
+        <section class="outras-secoes-eventos">
+            <section class="bloco-informativo-eventos">
+                <section class="imagem-bloco">
+                    <img src="./imagens/torneio-sinop.png" alt="torneio-sinop">
+                </section>
+                <h3>3º Festival de pesca em Sinop-MT</h3>
+                <p>Começa agora o 3º festival de pesca em Sinop-MT, traga sua isca e seu anzol, e venha competir conosco.</p>
+                <div class="botao-cidade">
+                    <button onclick="showEventInfo('sinop')">Confira o evento em Sinop</button>
+                </div>
+            </section>
+
+            <section class="bloco-informativo">
+                <section class="imagem-bloco">
+                    <img src="./imagens/sorriso-pesca-feminina.png" alt="pesca-feminina">
+                </section>
+                <h3>1º Festival de pesca feminino de Sorriso-MT</h3>
+                <p>Venha conhecer agora em Sorriso-MT o primeiro festival de pesca feminino, feito para você e sua família.</p>
+                <div class="botao-cidade">
+                    <button onclick="showEventInfo('sorriso')">Confira o evento em Sorriso</button>
+                </div>
+            </section>
+
+            <section class="bloco-informativo">
+                <section class="imagem-bloco">
+                    <img src="./imagens/39fipe.png" alt="Foto 1">
+                </section>
+                <h3>39º Festival Internacional dos dias 22/04 - 28/04</h3>
+                <p>Haja emoção. Acontece de hoje até domingo o 39º Festival Internacional. Não perca, apenas os melhores.</p>
+                <div class="botao-cidade">
+                    <button onclick="showEventInfo('rondonopolis')">Confira o evento em Rondonópolis</button>
+                </div>
+            </section>
+        </section>
+
+        <div class="eventus">
+            <div id="quadro">
+                <div id="sinop-evento" class="evento-info">
+                    <p>Informações sobre os eventos de pesca em Sinop.</p>
+                </div>
+                <div id="sorriso-evento" class="evento-info">
+                    <p>Informações sobre os eventos de pesca em Sorriso.</p>
+                </div>
+                <div id="rondonopolis-evento" class="evento-info">
+                    <p>Informações sobre os eventos de pesca em Rondonópolis.</p>
+                </div>
+            </div>  
+        </div>
+    </section>
+</main>
+Descrição do HTML
+<section class="evento" id="eventos" data-palavra-chave="eventos">: Define a seção principal dos eventos.
+
+class="evento": Classe CSS para estilização.
+id="eventos": Identificador único para a seção, usado para navegação.
+data-palavra-chave="eventos": Atributo de dados para funcionalidade de pesquisa de palavras-chave.
+<h1>Eventos</h1>: O título da seção, informando os usuários sobre o conteúdo da seção.
+
+<main class="margem conteudo">: Contêiner principal que envolve a seção de eventos.
+
+class="margem conteudo": Classes CSS para estilização.
+<section class="principal-eventos">: Seção principal que engloba todos os eventos.
+
+<section class="outras-secoes-eventos">: Seção que agrupa os blocos informativos de eventos.
+
+Blocos Informativos dos Eventos:
+
+<section class="bloco-informativo-eventos">: Define cada bloco informativo.
+<section class="imagem-bloco">: Contêiner para a imagem do evento.
+<img src="./imagens/...">: Imagem representativa do evento.
+<h3>: Título do evento.
+<p>: Descrição breve do evento.
+<div class="botao-cidade">: Contêiner para o botão que exibe mais informações.
+<button onclick="showEventInfo('...')">: Botão que aciona a função showEventInfo para exibir mais informações sobre o evento.
+<div class="eventus">: Contêiner que engloba a área de informações detalhadas sobre os eventos.
+
+<div id="quadro">: Contêiner para as informações específicas de cada cidade.
+<div id="...-evento" class="evento-info">: Bloco de informações detalhadas para cada cidade.
+
+JavaScript Associado
+A função showEventInfo exibe informações detalhadas sobre um evento quando o botão correspondente é clicado. Aqui está um exemplo de como pode ser implementada:
+
+javascript
+function showEventInfo(city) {
+    var quadro = document.getElementById("quadro");
+    var eventoInfos = quadro.getElementsByClassName("evento-info");
+
+    // Esconde todas as informações de eventos
+    for (var i = 0; i < eventoInfos.length; i++) {
+        eventoInfos[i].style.display = "none";
+    }
+
+    // Exibe a informação do evento selecionado
+    var eventoInfo = document.getElementById(city + "-evento");
+    eventoInfo.style.display = "block";
+}
+
+
+Conclusão
+Esta estrutura proporciona uma navegação intuitiva e organizada para os usuários do blog, permitindo que eles encontrem facilmente informações sobre os eventos de pesca em diferentes cidades. A combinação de HTML bem estruturado e JavaScript funcional resulta em uma experiência de usuário envolvente e informativa.
+
+##
+
+
+Seção de Peixes
+A seção de peixes destaca a diversidade de espécies de peixes encontradas no estado do Mato Grosso, tornando-o um destino ideal para os entusiastas da pesca esportiva. Esta seção fornece uma breve descrição sobre a variedade de peixes presentes nos rios da região, juntamente com um mapa interativo que destaca a localização geográfica do estado.
+
+Estrutura HTML da Seção de Peixes
+
+html
+<section class="peixe" id="peixe" data-palavra-chave="peixe">
+    <h1>Peixes</h1>
+</section>
+
+<main class="margem">
+    <div class="texto-e-minimapa">
+        <div class="texto">
+            <h3>A combinação entre belezas naturais e uma grande variedade de peixes torna o estado do Mato Grosso um verdadeiro paraíso para os amantes de pesca esportiva. Um destino que vai te surpreender!</h3>
+            <p>Localizado no Centro-Oeste brasileiro, o estado de Mato Grosso é repleto de cenários paradisíacos para aqueles que desejam se aventurar pela pesca esportiva. Banhado por inúmeros rios, o estado está localizado entre três bacias hidrográficas: Amazônica, Tocantins-Araguaia e Platina, que é subdividida em bacias dos Rios Paraná e Paraguai. Por essa razão, Mato Grosso possui peixes como Pirarara, Piraíba, Barbado, Dourado, Pintado, Pacu, Piraputanga, Piavuçu, Jaú, Cachara, Piranha e o Tucunaré, entre outros.</p>
+        </div>
+        <div class="minimapa">
+            <div class="mapinha" id="minimapa" style="height: 100%;"></div>
+        </div>
+    </div>
+</main>
+Descrição do HTML
+<section class="peixe" id="peixe" data-palavra-chave="peixe">: Define a seção principal sobre os peixes.
+
+class="peixe": Classe CSS para estilização.
+id="peixe": Identificador único para a seção, usado para navegação.
+data-palavra-chave="peixe": Atributo de dados para funcionalidade de pesquisa de palavras-chave.
+<h1>Peixes</h1>: Título da seção, indicando o conteúdo relacionado aos peixes.
+
+<main class="margem">: Contêiner principal que envolve o conteúdo relacionado aos peixes.
+
+class="margem": Classe CSS para estilização.
+Conteúdo sobre os Peixes:
+
+<div class="texto">: Contêiner para o texto descritivo sobre os peixes.
+
+<h3>: Título sobre a diversidade de peixes no Mato Grosso.
+<p>: Parágrafo com informações sobre os peixes encontrados na região.
+<div class="minimapa">: Contêiner para o mapa interativo.
+
+<div class="mapinha" id="minimapa" style="height: 100%;">: Contêiner para exibir o mapa interativo. O atributo id é usado para identificar o mapa e aplicar estilos e funcionalidades JavaScript associadas a ele.
+JavaScript Associado
+O mapa interativo é inicializado e exibido usando a API do Google Maps. O código JavaScript responsável por isso é incluído no final do documento HTML.
+
+Conclusão
+A seção de peixes oferece uma visão geral informativa sobre a variedade de espécies de peixes encontradas no estado do Mato Grosso, destacando sua importância como destino para a pesca esportiva. Combinado com o mapa interativo, os usuários podem explorar visualmente as áreas onde essas espécies podem ser encontradas.
+
+##
+
+Rodapé
+
+html
+<footer class="rodape">
+    <section class="copyright">
+        &copy 2024
+        <p>Product Owner: Júlio da Silva Rodrigues</p>
+        <p>Scrum Master: Júlio Cézar Muniz Dantas</p>
+        <p>Dev Team:</p>
+        <ul>
+            <li>Adriel Morelli Nogueira</li>
+            <li>Andre Ferreira Hashimoto</li>
+            <li>Carolina Soares de Caires</li>
+            <li>Dyenifer Silva Cunha</li>
+            <li>Hellielton Santos dos Reis</li>
+            <li>Graziela Nascimento e Silva</li>
+            <li>João Victor Poloniato Buss</li>
+            <li>Gabriel Rodrigues</li>
+            <li>Izabela Amaral de Souza</li>
+        </ul>
+    </section>
+</footer>
+Descrição
+Direitos Autorais: O símbolo de direitos autorais seguido pelo ano atual.
+Product Owner e Scrum Master: Nomes das pessoas responsáveis pelo produto e pela metodologia Scrum, respectivamente.
+Dev Team: Lista dos membros da equipe de desenvolvimento, incluindo seus nomes.
+Scripts
+Google Maps: O primeiro script carrega a API do Google Maps com a chave de acesso fornecida.
+jQuery: O segundo script carrega a biblioteca jQuery, uma ferramenta JavaScript popular para simplificar a manipulação do DOM e interações com o usuário.
+main.js: O terceiro script refere-se ao arquivo JavaScript principal do seu site, que contém a lógica e funcionalidades adicionais para interatividade e dinamismo.
+
+##
+##
+##
+
+Ao longo deste documento, exploramos detalhadamente a estrutura e o conteúdo do site de pesca, destacando suas seções principais e funcionalidades. Desde o cabeçalho, onde fornecemos informações de contato e navegação, até as seções dedicadas a notícias, eventos, mapas e informações sobre peixes, cada parte foi cuidadosamente projetada para oferecer uma experiência imersiva aos usuários interessados na pesca esportiva.
+
+O site não apenas fornece informações sobre os melhores locais de pesca na região centro-oeste, mas também destaca eventos locais, como torneios e festivais, oferecendo aos visitantes a oportunidade de se manterem atualizados e participarem ativamente da comunidade de pescadores. Além disso, a inclusão de um mapa interativo facilita a visualização dos locais de pesca e rios na área, fornecendo uma ferramenta valiosa para planejar viagens e expedições de pesca.
+
+Com uma equipe dedicada por trás do desenvolvimento, incluindo um Product Owner, Scrum Master e membros talentosos da equipe de desenvolvimento, o site foi concebido e implementado com foco na qualidade, usabilidade e experiência do usuário. A colaboração e o esforço conjunto garantiram que o site atendesse às necessidades e expectativas dos entusiastas da pesca, oferecendo um recurso abrangente e informativo para explorar e desfrutar do emocionante mundo da pesca esportiva.
+
+
+
+
