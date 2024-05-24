@@ -35,7 +35,7 @@ body {
     display: flex;
     width: 100%;
     height: 30%;
-    background-color: #B96D67;
+    background-color: #99CD85;
     flex-direction: row;
 }
 .contatos img{
@@ -106,7 +106,7 @@ a.logo{
 .menu ul li ul{
     display: none;
     background-color: #f4f4f4;
-    border-top:3px solid #F29188;
+    border-top:3px solid #99CD85;
 }
 .menu ul li ul li{
     height: auto;
@@ -143,10 +143,10 @@ button.pesquisar {
 }
 
 .noticias {
-    background-color: #F29188;
+    background-color: #99CD85;
     width: 100%;
     height: 10vw;
-    box-shadow: 0 0 50px #9B5C57 inset;
+    box-shadow: 0 0 50px #99CD85 inset;
     display: flex;
     justify-content: center;
     margin-top: 70px;
@@ -171,7 +171,7 @@ button.pesquisar {
 
 .bloco-informativo {
     width: calc(30% - 4vw);
-    background-color: #9B5C57;
+    background-color: #99CD85;
     border-radius: 2vw;
     color: #fff;
     flex-direction: column;
@@ -182,7 +182,7 @@ button.pesquisar {
 }
 .bloco-informativo-eventos {
     width: calc(30% - 4vw);
-    background-color: #9B5C57;
+    background-color: #99CD85;
     border-radius: 2vw;
     color: #fff;
     flex-direction: column;
@@ -249,7 +249,7 @@ button {
 }
 
 button:hover {
-    background-color: #9B5C57;
+    background-color: #99CD85;
     color:#fff;
     transition:0.5s;
 }
@@ -259,10 +259,10 @@ button:hover {
 }
 
 .maps {
-    background-color: #F29188;
+    background-color: #99CD85;
     width: 100%;
     height: 10vw;
-    box-shadow: 0 0 50px #9B5C57 inset;
+    box-shadow: 0 0 50px #99CD85 inset;
     display: flex;
     justify-content: center;
 
@@ -275,10 +275,10 @@ button:hover {
 }
 
 .evento {
-    background-color: #F29188;
+    background-color: #99CD85;
     width: 100%;
     height: 10vw;
-    box-shadow: 0 0 50px #9B5C57 inset;
+    box-shadow: 0 0 50px #99CD85 inset;
     display: flex;
     justify-content: center;
 
@@ -350,7 +350,7 @@ button:hover {
 
 .modal button {
     padding: 10px 20px;
-    background-color: #f29188;
+    background-color: #99CD85;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -358,14 +358,14 @@ button:hover {
 }
 
 .modal button:hover {
-    background-color: #e6837b;
+    background-color: #99CD85;
 }
 
 .peixe {
-    background-color: #F29188;
+    background-color: #99CD85;
     width: 100%;
     height: 10vw;
-    box-shadow: 0 0 50px #9B5C57 inset;
+    box-shadow: 0 0 50px #99CD85 inset;
     display: flex;
     justify-content: center;
     margin-top: -150px;
@@ -378,7 +378,7 @@ button:hover {
 }
 footer{
     width: 100%;
-    background-color: #9B5C57;
+    background-color: #99CD85;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -473,9 +473,33 @@ footer{
     }
 
     .bloco-informativo {
-        width: 70vw;
-        height: 300px; 
+        width: 85vw;
+        height: 355px; 
         margin-bottom: 20px; 
+    }
+
+    .principal-eventos{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70px;
+    }
+    
+    .bloco-informativo-eventos {
+        width: 85vw;
+        height: 355px; 
+        margin-bottom: 20px; 
+    }
+
+    .bloco-informativo-eventos img{
+        height: 40vw;
+    }
+    .bloco-informativo-eventos h3{
+        font-size: 4vw;
+        padding: 0 2vw;
+    }
+    .bloco-informativo-eventos p{
+        font-size: 3.1vw;
+        padding: 1vw 2vw;
     }
 
     .bloco-informativo img{
