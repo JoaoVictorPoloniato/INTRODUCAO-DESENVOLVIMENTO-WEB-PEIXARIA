@@ -238,7 +238,9 @@ button.pesquisar {
     justify-content: space-between;
     height: 0;
 }
-
+.imagem-bloco {
+   height: 50%; 
+}
 button {
     background-color: #fff;
     color: #034873;
@@ -378,24 +380,32 @@ button:hover {
     color: white;
     font-size: 3rem;
 }
-footer{
+footer {
     width: 100%;
     background-color: #99CD85;
-    height: 200px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    align-items: center;
 }
-.copyright{
-    width: 20%;
+.copyright {
     color: white;
     text-align: center;
-    margin-left: 39%;
+    max-width: 80%;
+    margin-top: 20px;
 }
 .copyright p {
     text-align: left;
+    margin-bottom: 5px;
+    line-height: 1.5;
 }
-
+@media screen and (max-width: 600px) {
+    .copyright {
+        max-width: 100%;
+        margin: 20px auto;
+    }
+    
+}
 @media screen and (max-width:600px){
     .menu{
         width: 100%;
@@ -422,52 +432,46 @@ footer{
         width: 88%;
         position: relative;
         box-sizing: content-box;
-    }
-
-    
+    } 
     .noticias {
     position: relative;
     top: 73px;
     height: 30%;
-
 }
-
+    .peixe {
+        position: relative;
+        height: 30%;
+    }
     .maps {
         position: relative;
         height: 30%;
         top: 50%;
     }
-
     .evento {
         position: relative;
         height: 30%;
         top: 50%;
     }
-
     .outras-secoes {
         flex-direction: column;
         align-items: center;
         margin-top: 70px;
     }
-
     .bloco-informativo {
         width: 85vw;
         height: 355px; 
         margin-bottom: 20px; 
     }
-
     .principal-eventos{
         flex-direction: column;
         align-items: center;
         margin-top: 70px;
-    }
-    
+    } 
     .bloco-informativo-eventos {
         width: 85vw;
         height: 355px; 
         margin-bottom: 20px; 
     }
-
     .bloco-informativo-eventos img{
         height: 40vw;
     }
@@ -479,7 +483,6 @@ footer{
         font-size: 3.1vw;
         padding: 1vw 2vw;
     }
-
     .bloco-informativo img{
         height: 40vw;
     }
@@ -491,25 +494,20 @@ footer{
         font-size: 3.1vw;
         padding: 1vw 2vw;
     }
-
     button {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
-
 }
-
 .principal-peixe {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
 }
-
 .outras-secoes-peixe {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 .bloco-informativo-peixe {
     background-color: white;
     margin: 10px;
@@ -519,24 +517,20 @@ footer{
     flex: 1 1 calc(33% - 20px); 
     box-sizing: border-box;
 }
-
 .bloco-informativo-peixe img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
-
 .bloco-informativo-peixe h3 {
     margin-bottom: 10px;
     color: #333;
 }
-
 .bloco-informativo-peixe p {
     margin-bottom: 15px;
     color: #666;
     line-height: 1.4;
 }
-
 .bloco-informativo-peixe button {
     background-color: #333;
     color: white;
@@ -545,22 +539,43 @@ footer{
     border-radius: 5px;
     cursor: pointer;
 }
-
 .bloco-informativo-peixe button:hover {
     background-color: #555;
 }
-
 @media (max-width: 768px) {
     .outras-secoes-peixe {
         flex-direction: column;
         align-items: center;
     }
-
     .bloco-informativo-peixe {
         flex: 1 1 100%;
         margin: 10px 0;
     }
 }
-
-
-
+@media screen and (max-width: 600px) {
+    .principal-eventos {
+        grid-template-columns: 1fr;
+        height: 288vw;
+        gap: 20px;
+    }
+    .bloco-informativo-eventos {
+        width: 100%;
+        text-align: center;
+    }
+    .bloco-informativo-eventos img {
+        height: 100%; 
+    }
+    .bloco-informativo-eventos h3 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    .bloco-informativo-eventos p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .botao-cidade button {
+        width: 80%; 
+        padding: 10px;
+        font-size: 1rem; 
+    }
+}
