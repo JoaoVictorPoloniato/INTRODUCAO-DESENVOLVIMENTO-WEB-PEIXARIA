@@ -11,10 +11,12 @@ body {
     font-style: italic;
     src: url('fontes/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
 }
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .cabecalho{
@@ -368,7 +370,7 @@ button:hover {
     box-shadow: 0 0 50px #99CD85 inset;
     display: flex;
     justify-content: center;
-    margin-top: -150px;
+    margin-top: -120px;
 
 }
 .peixe h1 {
@@ -392,30 +394,6 @@ footer{
 }
 .copyright p {
     text-align: left;
-}
-
-.texto-e-minimapa{
-    width: 30vw;
-    height: auto;
-    margin-left: 20%;
-}
-.texto-e-minimapa h3{
-    padding: 10px 2px;
-    text-align: left;
-    font-size: 1.5vw;
-}
-.texto-e-minimapa p{
-    text-align: left;
-    font-size: 1.3vw;
-
-}
-
-.minimapa{
-    width: calc(30vw - 10px);
-    height: 24vw;
-    position: absolute;
-    right: 15%;
-    top: 401.5%;
 }
 
 @media screen and (max-width:600px){
@@ -520,6 +498,69 @@ footer{
 
 }
 
+.principal-peixe {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.outras-secoes-peixe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bloco-informativo-peixe {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px); 
+    box-sizing: border-box;
+}
+
+.bloco-informativo-peixe img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.bloco-informativo-peixe h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.bloco-informativo-peixe p {
+    margin-bottom: 15px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.bloco-informativo-peixe button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bloco-informativo-peixe button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .outras-secoes-peixe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloco-informativo-peixe {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
 
 
 
